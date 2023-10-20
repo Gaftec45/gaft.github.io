@@ -4,59 +4,65 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div id="wrapper">
-  <div id="form-container">
-    <form id="patientForm">
-      <div class="form-group">
-        <label for="firstName">First Name:&emsp;&emsp;&emsp;</label>
-        <input type="text" id="firstName" name="firstName" required>
+    <div id="container">
+      <div id="form-container">
+        <form id="patientForm">
+          <div class="form-group">
+            <label for="firstName">First Name:&emsp;&emsp;&emsp;</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+            <br>
+          <div class="form-group">
+            <label for="lastName">Last Name:&emsp;&emsp;&emsp;</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+            <br>
+          <div class="form-group">
+            <label for="email">Email Address:&emsp;</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+            <br>
+          <div class="form-group">
+            <label for="gender">Gender:&emsp;&emsp;&emsp;&emsp;</label>
+            <select id="gender" name="gender" required>
+              <option value="male" style="border-radius: 4px;">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+            <br>
+          <div class="form-group">
+            <label for="recentlyInNigeria"><input type="checkbox" id="recentlyInNigeria" name="recentlyInNigeria">
+                Recently came to Nigeria within the 14 days?</label>
+          </div>
+            <br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button type="submit" id="submitButton" >Submit</button>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button type="button" id="updateButton" style="display: none;">Update</button>
+        </form>
       </div>
-      <br>
-      <br>
-      <div class="form-group">
-        <label for="lastName">Last Name:&emsp;&emsp;&emsp;</label>
-        <input type="text" id="lastName" name="lastName" required>
+        <br>
+        <br>
+        <br>
+        <div id="static"></div>
+        <div id="static1"></div>
+        
+      <div id="patients-table">
+        <table>
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email Address</th>
+              <th>Gender</th>
+              <th>Came to Nigeria within <br>the last 14 days?</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="patientTableBody"></tbody>
+        </table>
       </div>
-      <br>
-      <br>
-      <div class="form-group">
-        <label for="email">Email Address:&emsp;</label>
-        <input type="email" id="email" name="email" required>
-      </div><br>
-      <div class="form-group">
-        <label for="gender">Gender:&emsp;&emsp;&emsp;&emsp;</label>
-        <select id="gender" name="gender" required>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="recentlyInNigeria"><input type="checkbox" id="recentlyInNigeria" name="recentlyInNigeria">
-        Recently came to Nigeria within the 14 days?</label>
-      </div>
-      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button type="submit" id="submitButton">Submit</button>
-      <button type="button" id="updateButton" style="display: none;">Update</button>
-    </form>
-  </div>
-
-  <div id="patients-table">
-    <h2>Patient List</h2>
-    <table id="tbl">
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Gender</th>
-          <th>Recently in Nigeria</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody id="patientTableBody"></tbody>
-    </table>
-  </div>
-</div>
+    </div>
   <script src="gh.js"></script>
 </body>
 </html>
