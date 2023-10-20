@@ -1,0 +1,73 @@
+/*/////////////////////////////
+// COVID19 FORM
+// GAAF CEO OF TECH
+/////////////////////////////*/
+
+body {
+    background: #adaaaa;
+    font-family: arial;
+  }
+  
+#wrapper{
+    background: #fff;
+    padding: 5px;
+}
+
+
+#form-container {
+    height: 250px;
+    width: 800px;
+    border: 2px solid #dddddd;
+    text-align: match-parent;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px; font-weight: bold;
+
+  }
+  
+#patients-table
+
+  
+  input, select {
+    
+    padding: 5px;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+#tbl {
+    width: 90%;
+    border-collapse:collapse;
+    border: 2px solid #dddddd;
+  }
+  
+  th{
+    background: #a8a8a8;
+  }
+  
+  td, th {
+    border: 1px solid #c7c4c4;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  #updateButton {
+    background-color: #ff8800;
+    display: none;
+  }
+  
+  #updateButton:hover {
+    background-color: #d66e00;
+  }
+  
