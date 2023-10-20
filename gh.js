@@ -24,6 +24,8 @@ patientForm.addEventListener("submit", function (e) {
       <td>${recentlyInNigeria ? "Yes" : "No"}</td>
       <td>
         <button class="edit-btn">Edit</button>
+      </td>
+      <td>
         <button class="delete-btn">Delete</button>
       </td>
     `;
@@ -58,5 +60,23 @@ patientTableBody.addEventListener("click", function (e) {
   } else if (e.target.classList.contains("delete-btn")) {
     const row = e.target.parentNode.parentNode;
     patientTableBody.removeChild(row);
+    currentlyEditing = null;
+    updateButton.style.display = "none";
+    submitButton.style.display = "block";
   }
+});
+
+// Add a click event listener for the updateButton
+updateButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  // Update code here (same as in the submit handler)
+  currentlyEditing.cells[0].textContent = document.getElementById("firstName").value;
+  currentlyEditing.cells[1].textContent = document.getElementById("lastName").value;
+  currentlyEditing.cells[2].textContent = document.getElementById("email").value;
+  currentlyEditing.cells[3].textContent = document.getElementById("gender").value;
+  currentlyEditing.cells[4].textContent = document.getElementById("recentlyInNigeria").checked ? "Yes" : "No";
+  updateButton.style.display = "none";
+  submitButton.style.display = "block";
+  currentlyEditing = null;
+  patientForm.reset();
 });
