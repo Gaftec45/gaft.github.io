@@ -1,73 +1,62 @@
-/*/////////////////////////////
-// COVID19 FORM
-// GAAF CEO OF TECH
-/////////////////////////////*/
+/*////////////////////////////////////
+// FORM RECORD 
+//BY GAAF CEO OF TECH
+///////////////////////////////////*/
 
-body {
-    background: #adaaaa;
-    font-family: arial;
-  }
-  
-#wrapper{
-    background: #fff;
-    padding: 5px;
+body{background: #dddddd; font-family: arial; }
+
+#container{
+    margin: 10px auto; padding: 10px; background: #fff;
+}
+#patientForm {
+    height: 200px;
+    width: 800px;
+    border: 2px solid #dddddd;
+    text-align: ;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: bold;
 }
 
 
-#form-container {
-    height: 250px;
-    width: 800px;
-    border: 2px solid #dddddd;
-    text-align: match-parent;
-    padding: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px; font-weight: bold;
-
-  }
-  
-#patients-table
-
-  
-  input, select {
-    
-    padding: 5px;
-  }
-  
-  button {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-#tbl {
+table{
     width: 90%;
-    border-collapse:collapse;
-    border: 2px solid #dddddd;
+    padding-left: 300px;
+    border: 1px solid red;
+    border-collapse: collapse;
+    background-color: #fff;}
+
+th{
+    background: #dddddd;
+}
+
+table, th, td {
+  border: 2px solid #ccc;
+    
+}
+
+/* Add some spacing and padding for readability */
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Set a max-width for larger screens */
+@media (min-width: 90%) {
+  table {
+    max-width: 90%;
   }
-  
-  th{
-    background: #a8a8a8;
+    
+/* Make the table scroll horizontally on small screens */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+    overflow-x: auto;
   }
-  
-  td, th {
-    border: 1px solid #c7c4c4;
-    padding: 8px;
-    text-align: center;
-  }
-  
-  #updateButton {
-    background-color: #ff8800;
-    display: none;
-  }
-  
-  #updateButton:hover {
-    background-color: #d66e00;
-  }
-  
+
+#static{
+    padding: 200px;
+    margin: 20px;
+    width: 100px;
+}
